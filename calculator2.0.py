@@ -110,9 +110,7 @@ def calculate():
     try:
         expression = display_var.get()
         expression_eval = expression.replace("^", "**").replace("√", "sqrt").replace("π", "pi")
-
-        print("Evaluating:", expression_eval)
-
+        
         result = eval(expression_eval, {"__builtins__": None}, {
             "sin": safe_sin,
             "cos": safe_cos,
